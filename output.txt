@@ -1,0 +1,67 @@
+Loading saved restaurants
+Limiting restaurants
+Constructing features
+Calculating scores and establishing datasets
+Baseline: pick restaurant with lowest distance and highest rating
+Baseline recommends:
+Pete's Fish & Chips 3715 E Van Buren St
+Phoenix, AZ 85008 -112.001533 33.45111
+This adds a distance of 0.021151 km away with a 3.0-star rating
+Running regression against training set
+Predicting test set
+Case	Predicted	Actual	Percent error
+1 		1.850	1.805	2.5
+2 		2.753	2.439	12.9
+3 		2.182	1.925	13.3
+4 		2.721	2.695	1.0
+5 		2.789	2.500	11.6
+6 		2.468	2.195	12.4
+7 		2.999	1.830	63.8
+8 		3.047	2.466	23.5
+9 		3.052	2.503	22.0
+10		2.734	1.923	42.2
+11		3.029	2.386	26.9
+12		2.482	2.856	13.1
+13		2.158	2.165	0.3
+14		2.717	2.813	3.4
+15		2.179	2.197	0.8
+16		2.428	1.690	43.7
+17		3.055	2.186	39.8
+18		3.036	2.194	38.4
+19		2.755	2.485	10.9
+20		3.058	2.197	39.2
+21		2.190	2.854	23.3
+22		2.752	2.192	25.6
+23		2.337	2.502	6.6
+24		2.471	1.923	28.5
+25		2.327	2.163	7.6
+26		2.500	2.502	0.1
+27		2.093	2.195	4.6
+28		2.752	2.504	9.9
+29		2.241	2.501	10.4
+30		2.203	2.447	10.0
+31		2.095	1.686	24.2
+32		2.127	2.504	15.0
+33		2.425	2.196	10.4
+34		2.408	2.502	3.8
+35		2.742	1.461	87.6
+36		2.180	2.677	18.6
+37		2.691	2.702	0.4
+38		2.460	1.598	53.9
+39		1.854	2.853	35.0
+40		2.370	2.344	1.1
+41		2.338	2.347	0.4
+42		2.650	1.828	45.0
+43		3.079	2.056	49.8
+44		1.790	2.470	27.5
+45		2.067	2.504	17.4
+46		2.036	1.927	5.7
+47		2.373	2.505	5.2
+48		2.217	2.504	11.5
+49		2.393	2.489	3.9
+50		2.829	1.614	75.3
+Average percent error 20.8014599346
+Regression recommends:
+Pozoleria Guerrero 2801 E Van Buren St
+Phoenix, AZ 85008 -112.021191 33.451004
+This adds a distance of 0.100828 km away with a 4.5-star rating
