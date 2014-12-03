@@ -1,0 +1,3 @@
+Stars 4
+Price Range [3,4]
+Accepts Credit Cards

@@ -9,7 +9,7 @@ logger = logging.getLogger('dump_restaurants')
 
 BUSINESS_PATH = DATASET_PATH + 'yelp_academic_dataset_business.json'
 
-restaurants = []
+attributes = set()
 file_businesses = open(BUSINESS_PATH)
 for line in file_businesses:
     if line.strip() == '':
@@ -21,17 +21,24 @@ for line in file_businesses:
 
     # Only select restaurants from the desired city
     business = json.loads(line)
-    # logger.debug("Processing business: %s" % business['name'])
     if business['city'] == DESIRED_CITY and \
        'Restaurants' in business['categories']:
-        logger.debug('Business %s is a restaurant in %s' % (business['name'], DESIRED_CITY))
-        restaurants.append(business)
+        business_attributes = business['attributes']
+        if 'stars' not in business:
+            logger.debug("Processing business: %s" % business['name'])
+            print 'PROBLEM'
+        for attr in business_attributes:
+            if type(business_attributes[attr]) == bool:
+                attributes.add(attr)
 file_businesses.close()
 
-logger.debug('%d restaurants in %s found' % (len(restaurants), DESIRED_CITY))
+attributes.add('Price Range')
+logger.debug('%d attributes in %s found' % (len(attributes), DESIRED_CITY))
+for attr in attributes:
+    print attr
 
 # Save restaurants to the output using Pickle, Python's
 # persistence model
-logger.debug('Saving restaurants to file: %s' % RESTAURANTS_PATH)
-joblib.dump(restaurants, RESTAURANTS_PATH)
+logger.debug('Saving restaurants to file: %s' % ATTRIBUTES_PATH)
+joblib.dump(attributes, ATTRIBUTES_PATH )
 

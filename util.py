@@ -9,7 +9,8 @@ from sklearn import linear_model
 from sklearn.externals import joblib
 
 DESIRED_CITY = 'Phoenix'
-PICKLE_PATH = 'restaurants_%s.pkl' % (DESIRED_CITY.lower())
+RESTAURANTS_PATH = 'restaurants_%s.pkl' % (DESIRED_CITY.lower())
+ATTRIBUTES_PATH = 'attributes_%s.pkl' % (DESIRED_CITY.lower())
 DATASET_PATH = '/Users/mukul/Downloads/yelp_dataset/' # Change this for your machine
 
 # Taken from: http://stackoverflow.com/questions/4913349/
