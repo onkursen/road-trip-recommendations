@@ -1,0 +1,5 @@
+Stars 3
+Price Range [1,2]
+Accepts Credit Cards
+Drive-Thru
+Good For Kids
